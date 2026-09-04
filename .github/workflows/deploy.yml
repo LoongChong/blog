@@ -1,0 +1,61 @@
+name: Deploy Hexo to GitHub Pages
+
+# 触发条件：推送到 main 分支时自动构建发布
+# 平时写完文章只需 git push，剩下的全自动
+on:
+  push:
+    branches:
+      - main
+  # 允许在 Actions 页面手动点按钮触发
+  workflow_dispatch:
+
+# 官方 Pages 部署需要这三项权限（用 GITHUB_TOKEN，无需自建 PAT）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 防止多个部署任务并发
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出源码
+        uses: actions/checkout@v4
+
+      - name: 配置 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 生成静态文件
+        run: npx hexo clean && npx hexo generate
+
+      # GitHub Pages 默认会用 Jekyll 处理，会忽略下划线开头的资源目录
+      # 加这个文件让 Pages 原样发布，避免部分资源 404
+      - name: 添加 .nojekyll
+        run: touch public/.nojekyll
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
