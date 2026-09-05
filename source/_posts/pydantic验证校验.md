@@ -12,6 +12,7 @@ updated:
 tags:
 keywords:
 top_img:
+cover: /img/lachang.png
 ---
 
 <!-- more -->
