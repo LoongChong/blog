@@ -8,7 +8,6 @@ tags:
   - Hexo
   - Butterfly
   - 踩坑
-cover: /img/default-cover.jpg
 description: 用 Hexo 8 + Butterfly 5.7 搭技术博客的完整记录，包含 5 个真实卡住我的问题：runtime_date 类型错误、root 子路径部署、4.x 遗留配置失效、图片 404、GitHub Actions 权限。
 keywords: Hexo, Butterfly, 博客搭建, GitHub Pages, GitHub Actions
 top_img:

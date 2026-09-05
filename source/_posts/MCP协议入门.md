@@ -8,7 +8,6 @@ tags:
   - MCP
   - Agent
   - 大模型
-cover: /img/default-cover.jpg
 description: 用 USB-C 的类比讲清楚 MCP（Model Context Protocol）解决什么问题、三层角色怎么分工、以及一个最小可用的 MCP Server 长什么样。
 keywords: MCP, Model Context Protocol, Agent, Function Calling, 工具调用
 top_img:
