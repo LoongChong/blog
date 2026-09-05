@@ -38,7 +38,7 @@ menu:
 code_blocks:
   # 可选：darker / pale night / light / ocean / false
   # 站点默认深色，用 darker 才协调
-  theme: darker
+  theme: ocean
   # 代码块顶部的 macOS 红黄绿三色圆点
   macStyle: true
   # 超过这个高度自动折叠（单位 px），false 为不限制
@@ -69,7 +69,7 @@ favicon: /img/favicon.png
 
 avatar:
   # 换成自己的头像：直接替换 source/img/avatar.jpg 即可，路径不用改
-  img: /img/avatar.jpg
+  img: /img/QQ_head.jpg
   effect: false
 
 # Disable all banner images
@@ -115,7 +115,7 @@ cover:
   archives_enable: true
   # When cover is not set, the default cover is displayed
   default_cover:
-    - /img/default-cover.jpg
+    - /img/lachang.png
 
 # Replace Broken Images
 error_img:
