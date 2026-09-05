@@ -115,7 +115,7 @@ cover:
   archives_enable: true
   # When cover is not set, the default cover is displayed
   default_cover:
-    - /img/default-cover.jpg
+    - /img/lachang.png
 
 # Replace Broken Images
 error_img:
