@@ -405,15 +405,14 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: 2
+  # 改成 false → 不自动切换，首次访问默认【浅色】，访客仍可点右上角按钮切深色
+  autoChangeMode: false
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
-  # 技巧：start=1 + end=1 可实现「首次访问默认深色」
-  #   判断式为 start<end ? (hour<start || hour>=end) : (hour>=start || hour<end)
-  #   start=1,end=1 时走后半支，hour>=1 || hour<1 对 0~23 恒为真 → 恒为夜间
+  # autoChangeMode 为 false 时下面 start/end 不生效，仅作记录保留
   #   注意 start 不能填 0：源码是 `darkmode.start || 6`，0 会被当假值回退成 6
   # 访客手动切换后写入 localStorage，之后以访客选择为准，切换按钮依然可用
-  start: 1
-  end: 1
+  start: 6
+  end: 18
 
 # Show scroll percent in scroll-to-top button
 rightside_scroll_percent: false
@@ -1099,7 +1098,10 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    # 注意：inject 是“原样写入”，不会自动加 root 前缀，子路径部署必须手写 /blog/
+    - <link rel="stylesheet" href="/blog/css/custom.css">
+    # 文件来自 source/css/custom.css，生成后位于 public/css/custom.css，
+    # 部署到 blog 仓库后通过 https://LoongChong.github.io/blog/css/custom.css 访问
   bottom:
     # - <script src="xxxx"></script>
 

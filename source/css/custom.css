@@ -1,0 +1,37 @@
+/* ============================================================
+   浅色模式美化（LoongChong）
+   仅作用于浅色模式 [data-theme="light"]，深色模式保持原样
+   想还原：把 inject.head 里这一行删掉即可
+   ============================================================ */
+
+/* 1) 站点整体背景：柔和浅色渐变，替代深色的 sheep.jpg 满屏照片 */
+html[data-theme="light"] body {
+  background: linear-gradient(135deg, #f5f8fc 0%, #eaf1f8 100%) !important;
+}
+
+/* 2) 顶图（首页 banner / 文章头图）底部加深渐隐，标题文字更清晰 */
+html[data-theme="light"] #page-header::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.28) 100%) !important;
+}
+
+/* 3) 文章卡片 / 侧边栏卡片：圆角 + 淡蓝轻阴影，更有层次 */
+html[data-theme="light"] .card,
+html[data-theme="light"] .aside-content > .card-widget,
+html[data-theme="light"] #post-info {
+  border-radius: 14px !important;
+  box-shadow: 0 6px 22px rgba(73, 177, 245, 0.10) !important;
+}
+
+/* 4) 正文区背景纯白、圆角，浮在渐变背景之上更干净 */
+html[data-theme="light"] #article-container,
+html[data-theme="light"] .layout > .recent-post,
+html[data-theme="light"] .layout .card {
+  background: #ffffff !important;
+}
+
+/* 5) 顶栏半透明毛玻璃，浅色下更通透 */
+html[data-theme="light"] #nav {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
