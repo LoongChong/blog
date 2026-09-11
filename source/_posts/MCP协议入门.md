@@ -3,7 +3,7 @@ title: MCP 协议入门：为什么它是 Agent 的 USB-C
 date: 2026-09-04 16:00:00
 updated:
 categories:
-  - Agent 开发
+  - Agent开发
 tags:
   - MCP
   - Agent

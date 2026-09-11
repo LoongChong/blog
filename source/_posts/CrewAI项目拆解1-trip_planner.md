@@ -1,11 +1,12 @@
 ---
-title: CrewAi项目拆解-trip_planner
+title: Crew AI项目拆解-trip_planner
 description: 学习Crew AI项目通过项目学习框架
 categories:
   - Agent开发
 tags:
-  - CrewAi
+  - Crew AI
   - Agent框架
+  - 项目
 date: 2026-09-09 16:25
 cover: /img/crewai.png
 ---

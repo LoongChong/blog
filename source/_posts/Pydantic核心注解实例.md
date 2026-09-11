@@ -1,7 +1,7 @@
 ---
 title: Pydantic核心注解实例
 categories:
-  - Agent 开发
+  - Agent开发
 cover: /img/pydantic.jpg
 description: pydantic强校验中的一些用法
 comments: true

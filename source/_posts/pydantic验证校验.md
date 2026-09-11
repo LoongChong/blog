@@ -1,7 +1,7 @@
 ---
 title: pydantic验证校验
 categories:
-  - Agent 开发
+  - Agent开发
 description: 一句话说清这篇文章解决什么问题
 comments: true
 toc: true

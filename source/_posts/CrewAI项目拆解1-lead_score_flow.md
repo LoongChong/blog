@@ -6,6 +6,7 @@ categories:
 tags: 
   - Crew AI
   - Agent框架
+  - 项目
 cover: /img/crewai.png
 date: 2026-09-09 19:35
 ---
