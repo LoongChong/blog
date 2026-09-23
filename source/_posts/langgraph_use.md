@@ -1,3 +1,13 @@
+---
+title: Langgraph消息分发
+description: 主要学习langgraph中的最基础的消息分发
+categories:
+  - Agent开发
+tags: 
+  - Agent框架
+  - Langgraph
+---
+
 # Types
 
 ## Send
