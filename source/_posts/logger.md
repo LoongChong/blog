@@ -25,7 +25,7 @@ cover: /img/lachang.png
 | Formatter      | 格式器，规定日志长什么样（时间？级别？内容？） |
 | Filter（可选） | 过滤器，筛选哪些日志能过                       |
 
-简单理解为：
+简单理解为： 
 
 > Logger产生日志 → Handler接收日志 → Formatter美化日志 → 输出到你想要的地方。
 
